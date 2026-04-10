@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <groups>
+        <run>
+            <include name="Smoke"/>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="Listeners"></listener>
+    </listeners>
+    <test thread-count="5" name="E2E framework test">
+        <classes>
+            <class name="BuyProductsTestAndroid"></class>
+        </classes>
+    </test>
+
+    <test thread-count="5" name="Toast Message Validation Test">
+        <classes>
+            <class name="ToastMessageTestAndroid"></class>
+        </classes>
+    </test>
+</suite>
